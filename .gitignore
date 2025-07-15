@@ -1,0 +1,36 @@
+# Node.js specific ignores
+node_modules/
+npm-debug.log
+.npm/
+
+/dist/ # Compiled output directories (for all packages)
+/build/ # Another common build output directory
+/out/ # Another common build output directory
+
+# Environment variables
+.env # Keep all .env files out of version control
+.env.local # Specific to local development, should not be committed
+.env.*.local # More specific local environment files
+
+
+# OS generated files
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
+
+# IDE specific files
+.vscode/ # VS Code settings (if not shared)
+
+/coverage/
+.nyc_output/
+*.lcov
+.cache/
+
+# TypeScript specific
+*.tsbuildinfo # TypeScript incremental build info
+
+# Docker
+*.dockerignore
+Dockerfile.backup
+docker-compose.backup.yml

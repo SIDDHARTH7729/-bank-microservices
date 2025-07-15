@@ -1,0 +1,21 @@
+{
+  "name": "@bank/redis-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "siddharth",
+  "license": "ISC",
+  "description": "Redis-client package for all the other packages",
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@bank/logger": "file:../logger",
+    "ioredis": "^5.6.1"
+  }
+}
