@@ -8,6 +8,7 @@ npm-debug.log
 /out/ # Another common build output directory
 
 # Environment variables
+.env
 .env # Keep all .env files out of version control
 .env.local # Specific to local development, should not be committed
 .env.*.local # More specific local environment files
