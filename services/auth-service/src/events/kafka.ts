@@ -15,3 +15,12 @@ export const connectKafka = async() =>{
     throw error
    }
 }
+
+export const disConnectKafka = async () =>{
+   try {
+      await kafkaCLient.disConnect();
+      logger.info("Kafka producer disconnected")
+   } catch (error) {
+       logger.error("Failed to disconnect kafka producer/consumer")
+   }
+}
