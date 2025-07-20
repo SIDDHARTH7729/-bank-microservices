@@ -1,11 +1,11 @@
 import { customAlphabet } from "nanoid";
 import { AccountType } from "../entity/account.entity";
-import { string } from "zod";
+import { ERROR_CODES } from "@bank/constants";
 
 export const createError = (
     message:string,
     statusCode:number,
-    errorCode:'E0'
+    errorCode:(typeof ERROR_CODES)[keyof typeof ERROR_CODES]
 ):Error => {
    return Object.assign(new Error(message),{statusCode,errorCode});
 }
@@ -24,3 +24,4 @@ export const generateAccountNumber = (
 
     return `${accountTypeList[accountType]}${date}${accountTypeList[accountType]}${uniqueId}`
 }
+
