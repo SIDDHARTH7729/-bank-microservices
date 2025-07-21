@@ -2,6 +2,8 @@
 node_modules/
 npm-debug.log
 .npm/
+**/dist/
+**/.env
 
 /dist/ # Compiled output directories (for all packages)
 /build/ # Another common build output directory
@@ -35,3 +37,5 @@ Desktop.ini # Windows
 *.dockerignore
 Dockerfile.backup
 docker-compose.backup.yml
+
+transaction-service

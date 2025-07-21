@@ -22,7 +22,7 @@ app.use((req:Request,res:Response,next:NextFunction) => {
 });
 
 app.get('/health', (req:Request, res:Response) => {
-   res.status(200).json({status:"Server is Up and Running"});
+   res.status(200).json({status:"Server is up and Running"});
 });
 
 proxyServices(app);

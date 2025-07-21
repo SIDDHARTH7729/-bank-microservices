@@ -1,8 +1,7 @@
 import { BaseProducer,KafkaMessage } from "@bank/kafka-client";
 import { USER_TOPICS} from "@bank/constants";
-import { read } from "fs";
+import { producer } from "../kafka";
 
-const {producer} = require("./kafka.ts");
 
 export interface UserRegisteredData{
     id:number;

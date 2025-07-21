@@ -65,6 +65,9 @@ export class AccountService{
         const accounts = await this.accountRepository.find({
             where:{userId}
         })
+        if(!accounts.length){
+            throw createError('No accounts found',404,ERROR_CODES.ACCOUNT_NOT_FOUND);
+        }
         return accounts;
     }
 

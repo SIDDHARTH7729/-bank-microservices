@@ -8,7 +8,7 @@ indexRouter.get('/',async (req:Request, res:Response) => {
 })
 
 indexRouter.get('/health',async (req:Request, res:Response) => {
-    return res.status(200).json({service:config.SERVICE_NAME,status:"Server is Up and Running"})
+    return res.status(200).json({service:config.SERVICE_NAME,status:"Server is up and Running"})
 })
 
 export {indexRouter};

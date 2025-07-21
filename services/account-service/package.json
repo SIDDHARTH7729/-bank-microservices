@@ -1,22 +1,22 @@
 {
   "name": "@bank/account-service",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"ts-node src/app.ts",
-    "dev":"tsc",
-    "test":"jest"
+    "test": "jest",
+    "start": "ts-node src/app.ts",
+    "dev": "ts-node-dev src/app.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "siddharth",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@bank/logger": "file:../../packages/logger",
-    "@bank/kafka-client": "file:../../packages/kafka-client",
-    "@bank/redis-client": "file:../../packages/redis-client",
     "@bank/constants": "file:../../packages/constants",
+    "@bank/kafka-client": "file:../../packages/kafka-client",
+    "@bank/logger": "file:../../packages/logger",
+    "@bank/redis-client": "file:../../packages/redis-client",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
@@ -31,6 +31,7 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.0.14",
     "@types/pg": "^8.15.4",
+    "jest": "^30.0.4",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"

@@ -55,6 +55,8 @@ export class AuthService {
             key: user.id?.toString() || "0",
             value: user,
         });
+
+        return user;
     }
 
     async login({ email, password }: LoginDto) {
@@ -81,11 +83,12 @@ export class AuthService {
             `auth:${credential.user.id}:${token}`,24*60*60,'true'
         )
 
+        console.log(credential)
         return {
             token,
             firstName: credential.user.firstName,
             lastName: credential.user.lastName,
-            email: credential.user.email
+            email: credential.user.email,
         }    
     }
 

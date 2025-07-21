@@ -41,7 +41,7 @@ export class AuthController{
             password
         })
 
-        return res.status(200).json({token});
+        return res.status(200).json({token,email});
     }
 
     async logout(req:Request,res:Response){
