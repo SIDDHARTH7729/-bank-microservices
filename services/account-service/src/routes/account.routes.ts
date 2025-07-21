@@ -15,7 +15,7 @@ accountRouter.get("/:accountNumber",
               accountController.get.bind(accountController));
 accountRouter.delete("/:accountNumber",
               accountController.delete.bind(accountController));
-accountRouter.post("/internal-transaction",
+accountRouter.post("/internal/transaction",
               accountController.internalTransaction.bind(accountController));
 
 export default accountRouter;

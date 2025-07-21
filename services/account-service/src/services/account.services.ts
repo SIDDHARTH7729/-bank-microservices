@@ -58,7 +58,6 @@ export class AccountService{
         });
 
         return account
-        
     }
 
     async list(userId:number){

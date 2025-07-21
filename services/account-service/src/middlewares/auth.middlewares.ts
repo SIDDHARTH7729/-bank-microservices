@@ -18,7 +18,7 @@ export const verifyToken = async (
     const token = req.headers['authorization']?.split(' ')[1];
 
     if (!token) {
-        return res.status(403).json({ message: "Invalid auth token" });
+        return res.status(403).json({ message: "Unauthorized" });
     }
 
     jwt.verify(token, config.JWT_SECRET, async (err: any, decoded: any) => {
@@ -30,7 +30,7 @@ export const verifyToken = async (
         const redisToken = await redis.get(redisKey);
 
         if (!redisToken) {
-            return res.status(403).json({ message: "Invalid auth token" });
+            return res.status(403).json({ message: "Unauthorized" });
         }
 
         req.userId = decoded.id;

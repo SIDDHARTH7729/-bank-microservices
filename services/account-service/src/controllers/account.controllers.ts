@@ -54,7 +54,7 @@ export class AccountController{
         const {accountNumber} = req.params;
         const userId = req.userId!;
         await this.accountService.delete({accountNumber,userId});
-        return res.status(200).json({message:"Account deleted successfully"});
+        return res.status(200).json({message:`Account ${accountNumber} deleted successfully for user`});
     }
 
     async internalTransaction(req:Request,res:Response):Promise<any>{
