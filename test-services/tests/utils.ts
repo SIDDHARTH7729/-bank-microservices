@@ -5,7 +5,7 @@ import { AccountType,UserType } from "./type";
 export const getTestUser = (): UserType =>({
     firstName:"siddhchk",
     lastName:"siddhchklast",
-    email:"siddhchk22@gmail.com",
+    email:"siddhchk24@gmail.com",
     password:"siddhchk"
 })
 
